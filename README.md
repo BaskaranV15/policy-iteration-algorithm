@@ -57,7 +57,7 @@ else:
 ```PYTHON
 def policy_iteration(P, gamma=1.0, theta=1e-10):
   random_actions = np.random.choice(tuple(P[0].keys()), len(P))
-  ramdon_actions=np.random.choice(tuple (P[0].keys()), len(P))
+  
   pi=lambda s: {s: a for s, a in enumerate(random_actions)} [s]
   while True:
     old_pi={s:pi(s) for s in range (len(P))}
@@ -66,7 +66,8 @@ def policy_iteration(P, gamma=1.0, theta=1e-10):
     if old_pi=={s:pi(s) for s in range(len(P))}:
       break
   return V,pi
-
+```
+```
 optimal_V, optimal_pi = policy_iteration(P)
 
 print('Name: BASKARAN V                  Register Number: 2122222230020        ')
